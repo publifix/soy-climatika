@@ -8,6 +8,16 @@
   const ctaScrim = videoCta.querySelector('.cta-scrim');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- PREVIEW: solo los primeros 10s en loop dentro de la card ---------- */
+  const PREVIEW_LOOP_SECONDS = 10;
+  let previewMode = true;
+
+  ctaVideo.addEventListener('timeupdate', () => {
+    if (previewMode && ctaVideo.currentTime >= PREVIEW_LOOP_SECONDS){
+      ctaVideo.currentTime = 0;
+    }
+  });
+
   /* ---------- VIDEO STAGE (FLIP: del cuadrante a pantalla completa) ---------- */
   let stageOpen = false;
 
@@ -26,6 +36,7 @@
     const rect = videoCta.getBoundingClientRect();
     const cardRadius = getComputedStyle(videoCta).borderRadius;
 
+    previewMode = false;
     videoStage.insertBefore(ctaVideo, stageClose);
     ctaVideo.muted = false;
     ctaVideo.controls = true;
@@ -68,6 +79,7 @@
       videoCta.insertBefore(ctaVideo, ctaScrim);
       ctaVideo.muted = true;
       ctaVideo.controls = false;
+      previewMode = true;
       ctaVideo.play().catch(() => {});
     };
 
