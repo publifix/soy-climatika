@@ -9,8 +9,7 @@
 .aq-hero .back-link:hover{ background:rgba(255,255,255,.28); }
 .aq-hero .hero-eyebrow{ color:var(--menta-claro); }
 .aq-hero-sub{ color:var(--menta-claro); }
-.aq-hero .hero-band-inner,
-.aq-hero .back-link{ position:relative; z-index:1; }
+.aq-hero .hero-band-inner{ position:relative; z-index:1; }
 
 .aq-hero-actions{
   display:flex;
