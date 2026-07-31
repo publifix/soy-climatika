@@ -131,6 +131,24 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   line-height:1;
   margin:0;
 }
+.card-nosotros .avatar{
+  position:absolute;
+  top: clamp(18px, 2.2vw, 32px);
+  left: clamp(18px, 2.2vw, 32px);
+  width: clamp(52px, 5vw, 72px);
+  height: clamp(52px, 5vw, 72px);
+  border-radius:50%;
+  overflow:hidden;
+  display:block;
+  border: 3px solid var(--blanco);
+  box-shadow: 0 4px 14px rgba(15,26,24,.18);
+}
+.card-nosotros .avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
 
 /* ---------- AQUAVITA ---------- */
 .card-aquavita{
@@ -138,6 +156,37 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   background:var(--verde-climatika);
   color:var(--blanco);
   justify-content:flex-end;
+}
+.card-aquavita .water{
+  position:absolute;
+  top:0; left:0; right:0;
+  height:68%;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+.card-aquavita .water-layer{
+  position:absolute;
+  bottom:-2px;
+  left:0;
+  width:200%;
+  height:100%;
+}
+.card-aquavita .water-back{
+  fill: rgba(255,255,255,.07);
+  animation: aquaWave 16s linear infinite;
+}
+.card-aquavita .water-front{
+  fill: rgba(255,255,255,.12);
+  animation: aquaWave 10s linear infinite reverse;
+}
+@keyframes aquaWave{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+.aquavita-content{
+  position:relative;
+  z-index:1;
 }
 .card-aquavita .eyebrow{
   font-size:11px;
@@ -482,6 +531,7 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
 @media (prefers-reduced-motion: reduce){
   .logo-slide, .dots span{ animation:none !important; opacity:1 !important; }
   .logo-slide:not(:nth-child(1)){ display:none; }
+  .water-layer{ animation:none !important; }
   a.cell, button.cell, .nav-panel, .video-stage, .scrim, .menu-btn{
     transition:none !important;
   }
