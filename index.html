@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/hero.css">
 </head>
 <body>
@@ -30,7 +31,7 @@
   </div>
 
   <!-- NOSOTROS -->
-  <a class="cell card-nosotros" href="/nosotros.html">
+  <a class="cell card-nosotros" href="nosotros.html">
     <div class="founder">
       <picture class="avatar">
         <source srcset="assets/img/team/fer-bermudez.webp" type="image/webp">
@@ -45,7 +46,7 @@
   </a>
 
   <!-- AQUAVITA -->
-  <a class="cell card-aquavita" href="/aquavita.html">
+  <a class="cell card-aquavita" href="aquavita.html">
     <div class="water" aria-hidden="true">
       <svg class="water-layer water-back" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M0,55 C150,25 450,85 600,55 C750,25 1050,85 1200,55 L1200,120 L0,120 Z"></path>
@@ -88,7 +89,7 @@
   </div>
 
   <!-- CONTACTO -->
-  <a class="cell card-contacto" href="/contacto.html">
+  <a class="cell card-contacto" href="contacto.html">
     <div class="eyebrow">Hablemos</div>
     <div>
       <h3 class="display">Contacto</h3>
@@ -113,12 +114,12 @@
 <!-- PANEL DE NAVEGACIÓN (cuadrante con esquinas redondeadas) -->
 <nav class="nav-panel" id="navPanel" aria-label="Menú principal" hidden>
   <ul>
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/nosotros.html">Nosotros</a></li>
-    <li><a href="/aquavita.html">Aquavita</a></li>
-    <li><a href="/tecnologia.html">Tecnología</a></li>
-    <li><a href="/clientes.html">Clientes</a></li>
-    <li><a href="/contacto.html">Contacto</a></li>
+    <li><a href="./" aria-current="page">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="aquavita.html">Aquavita</a></li>
+    <li><a href="tecnologia.html">Tecnología</a></li>
+    <li><a href="clientes.html">Clientes</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
   </ul>
   <div class="nav-foot">Soy Climatika · Hub digital de vinculación socioambiental</div>
 </nav>
@@ -128,6 +129,7 @@
   <button class="stage-close" id="stageClose" aria-label="Cerrar video">×</button>
 </div>
 
+<script src="assets/js/nav.js" defer></script>
 <script src="assets/js/hero.js" defer></script>
 </body>
 </html>

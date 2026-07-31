@@ -1,52 +1,6 @@
-:root{
-  --verde-climatika:#1F7F52;
-  --verde-menta:#BCF4CE;
-  --menta-claro:#EDFBF3;
-  --verde-medio:#357A54;
-  --verde-bosque:#123D33;
-  --carbon:#243C3A;
-  --niebla:#F3F7F4;
-  --blanco:#FFFFFF;
-  --verde-accion:#2FE38A;
-  --overlay-scrim: rgba(15, 26, 24, .55);
-  --cell-shadow: 0 1px 2px rgba(15,26,24,.05), 0 12px 32px rgba(15,26,24,.06);
-
-  --radius: clamp(16px, 1.8vw, 28px);
-  --radius-sm: clamp(12px, 1.2vw, 18px);
-  --gap: clamp(8px, 1vw, 14px);
-  --pad: clamp(6px, 0.9vw, 16px);
-
-  --ease: cubic-bezier(.4,0,.2,1);
-}
-
-*{ box-sizing:border-box; }
-
 html,body{
   height:100%;
-  margin:0;
   overflow:hidden;
-  background:var(--blanco);
-  font-family:'Inter', sans-serif;
-  -webkit-font-smoothing:antialiased;
-}
-
-body{ position:relative; }
-
-a{ color:inherit; }
-
-.display{
-  font-family:'Space Grotesk', sans-serif;
-  letter-spacing:-0.02em;
-}
-
-.sr-only{
-  position:absolute;
-  width:1px; height:1px;
-  padding:0; margin:-1px;
-  overflow:hidden;
-  clip:rect(0,0,0,0);
-  white-space:nowrap;
-  border:0;
 }
 
 /* ---------- HERO GRID ---------- */
@@ -124,6 +78,7 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   background:var(--verde-menta);
   color:var(--carbon);
   justify-content:flex-end;
+  view-transition-name: nosotros-hero;
 }
 .card-nosotros h2{
   font-weight:600;
@@ -393,128 +348,6 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
 }
 .card-contacto .arrow{ color:var(--blanco); }
 
-/* ---------- MENU BUTTON (icono Climatika, no hamburguesa) ---------- */
-.menu-btn{
-  position:fixed;
-  top: clamp(24px, 2.6vw, 40px);
-  right: clamp(24px, 2.6vw, 40px);
-  z-index:50;
-  width: clamp(52px, 4.4vw, 66px);
-  height: clamp(52px, 4.4vw, 66px);
-  border-radius:50%;
-  background:var(--niebla);
-  border:none;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  box-shadow:0 6px 18px rgba(0,0,0,.18);
-  transition: transform .3s ease;
-  padding:0;
-}
-.menu-btn:hover{ transform:scale(1.06); }
-.menu-btn:focus-visible{
-  outline: 3px solid var(--verde-accion);
-  outline-offset: 3px;
-}
-.menu-btn picture{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.menu-btn img{
-  width:56%;
-  height:auto;
-  display:block;
-  transition: opacity .2s ease;
-}
-.menu-btn .x-icon{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  opacity:0;
-}
-.menu-btn .x-icon span{
-  position:absolute;
-  width:44%;
-  height:2px;
-  background:var(--carbon);
-  border-radius:2px;
-}
-.menu-btn .x-icon span:nth-child(1){ transform:rotate(45deg); }
-.menu-btn .x-icon span:nth-child(2){ transform:rotate(-45deg); }
-.menu-btn.open .icono{ opacity:0; }
-.menu-btn.open .x-icon{ opacity:1; }
-
-/* ---------- SCRIM (compartido nav + modal) ---------- */
-.scrim{
-  position:fixed;
-  inset:0;
-  background:var(--overlay-scrim);
-  z-index:40;
-  opacity:0;
-  pointer-events:none;
-  transition: opacity .3s var(--ease);
-}
-.scrim.open{ opacity:1; pointer-events:auto; }
-
-/* ---------- NAV PANEL (cuadrante con esquinas redondeadas, no full-screen) ---------- */
-.nav-panel{
-  position:fixed;
-  top: clamp(88px, 8vw, 118px);
-  right: clamp(20px, 2.6vw, 40px);
-  z-index:51;
-  width:min(340px, calc(100vw - 48px));
-  background:var(--carbon);
-  border-radius:var(--radius);
-  padding: clamp(24px,2.6vw,34px);
-  box-shadow:0 20px 60px rgba(0,0,0,.35);
-  transform:translateY(-12px) scale(.97);
-  opacity:0;
-  pointer-events:none;
-  transition: transform .3s var(--ease), opacity .25s ease;
-}
-.nav-panel.open{
-  transform:translateY(0) scale(1);
-  opacity:1;
-  pointer-events:auto;
-}
-.nav-panel ul{
-  list-style:none;
-  margin:0;
-  padding:0;
-}
-.nav-panel li{
-  border-top:1px solid rgba(255,255,255,.12);
-}
-.nav-panel li:last-child{ border-bottom:1px solid rgba(255,255,255,.12); }
-.nav-panel a{
-  font-family:'Space Grotesk', sans-serif;
-  font-weight:500;
-  font-size: clamp(18px, 1.8vw, 22px);
-  color:var(--niebla);
-  text-decoration:none;
-  display:block;
-  padding: 12px 2px;
-  letter-spacing:-0.01em;
-  transition: color .2s ease, transform .2s ease;
-}
-.nav-panel a:hover, .nav-panel a:focus-visible{
-  color:var(--verde-menta);
-  transform:translateX(6px);
-}
-.nav-panel a:focus-visible{ outline:none; }
-.nav-panel .nav-foot{
-  margin-top: clamp(18px,2vw,26px);
-  color:#8CA69C;
-  font-size:11.5px;
-  letter-spacing:.04em;
-}
-
 /* ---------- VIDEO STAGE (pantalla completa, transición FLIP desde el cuadrante) ---------- */
 .video-stage{
   position:fixed;
@@ -561,7 +394,7 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   .logo-slide, .dots span{ animation:none !important; opacity:1 !important; }
   .logo-slide:not(:nth-child(1)){ display:none; }
   .water-layer{ animation:none !important; }
-  a.cell, button.cell, .nav-panel, .video-stage, .scrim, .menu-btn{
+  a.cell, button.cell, .video-stage{
     transition:none !important;
   }
 }
@@ -584,5 +417,4 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   }
   .card-aquavita h2{ font-size:38px; }
   .cell{ min-height:220px; }
-  .nav-panel{ top:auto; bottom:20px; right:20px; left:20px; width:auto; }
 }

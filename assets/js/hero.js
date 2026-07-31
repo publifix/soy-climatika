@@ -1,53 +1,12 @@
 (() => {
-  const menuBtn = document.getElementById('menuBtn');
-  const navPanel = document.getElementById('navPanel');
-  const scrim = document.getElementById('scrim');
-
   const videoCta = document.getElementById('videoCta');
   const ctaVideo = document.getElementById('ctaVideo');
-  const ctaScrim = videoCta.querySelector('.cta-scrim');
   const videoStage = document.getElementById('videoStage');
   const stageClose = document.getElementById('stageClose');
+  if (!videoCta || !ctaVideo || !videoStage || !stageClose) return;
 
+  const ctaScrim = videoCta.querySelector('.cta-scrim');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* ---------- NAV PANEL (disclosure simple, con scrim) ---------- */
-  let navOpen = false;
-
-  function openNav(){
-    closeVideoStage();
-    navPanel.hidden = false;
-    requestAnimationFrame(() => navPanel.classList.add('open'));
-    scrim.classList.add('open');
-    menuBtn.classList.add('open');
-    menuBtn.setAttribute('aria-expanded', 'true');
-    navOpen = true;
-    const firstLink = navPanel.querySelector('a');
-    if (firstLink) firstLink.focus();
-    document.addEventListener('keydown', onNavKeydown);
-  }
-
-  function closeNav(){
-    if (!navOpen) return;
-    navPanel.classList.remove('open');
-    scrim.classList.remove('open');
-    menuBtn.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded', 'false');
-    setTimeout(() => { navPanel.hidden = true; }, 300);
-    menuBtn.focus();
-    navOpen = false;
-    document.removeEventListener('keydown', onNavKeydown);
-  }
-
-  function onNavKeydown(e){
-    if (e.key === 'Escape') closeNav();
-  }
-
-  menuBtn.addEventListener('click', () => {
-    if (navOpen) closeNav();
-    else openNav();
-  });
-  scrim.addEventListener('click', closeNav);
 
   /* ---------- VIDEO STAGE (FLIP: del cuadrante a pantalla completa) ---------- */
   let stageOpen = false;
@@ -62,7 +21,7 @@
 
   function openVideoStage(){
     if (stageOpen) return;
-    closeNav();
+    window.SoyClimatikaNav?.closeNav();
 
     const rect = videoCta.getBoundingClientRect();
     const cardRadius = getComputedStyle(videoCta).borderRadius;
@@ -131,4 +90,6 @@
 
   videoCta.addEventListener('click', openVideoStage);
   stageClose.addEventListener('click', closeVideoStage);
+
+  window.SoyClimatikaVideoStage = { close: closeVideoStage };
 })();
