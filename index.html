@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soy Climatika — Hub digital de vinculación socioambiental</title>
+<meta name="description" content="Soy Climatika conecta soluciones socioambientales con espacios públicos y privados que quieren ser agentes de cambio.">
+<link rel="icon" type="image/webp" href="assets/img/brand/icon-climatika.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/hero.css">
+</head>
+<body>
+
+<div class="hero">
+
+  <!-- MARCA -->
+  <div class="cell panel-left">
+    <div class="logo-wrap">
+      <picture>
+        <source srcset="assets/img/brand/logo-dark.webp" type="image/webp">
+        <img src="assets/img/brand/logo-dark.png" alt="Soy Climatika" width="180" height="45">
+      </picture>
+    </div>
+    <div class="headline">
+      <h1 class="display">Conectamos soluciones socioambientales</h1>
+      <p>Espacios públicos y privados que quieren ser agentes de cambio.</p>
+    </div>
+  </div>
+
+  <!-- NOSOTROS -->
+  <a class="cell card-nosotros" href="/nosotros.html">
+    <h2 class="display">Nosotros</h2>
+  </a>
+
+  <!-- AQUAVITA -->
+  <a class="cell card-aquavita" href="/aquavita.html">
+    <div class="eyebrow">Solución destacada</div>
+    <h2 class="display">Aquavita</h2>
+    <p>Tecnología desarrollada por emprendedores queretanos que permite a empresas, hoteles y hospitales lograr un ahorro significativo de agua.</p>
+  </a>
+
+  <!-- CTA: VIDEO DEMO -->
+  <button class="cell card-cta" id="videoCta" type="button" aria-haspopup="dialog" aria-controls="videoModal">
+    <div class="eyebrow">Video demo</div>
+    <div>
+      <h3 class="display">Conoce más</h3>
+      <div class="arrow" aria-hidden="true">→</div>
+    </div>
+  </button>
+
+  <!-- CARRUSEL CLIENTES -->
+  <div class="cell card-carousel">
+    <div class="eyebrow">Quienes ya confían</div>
+    <div class="logo-carousel" aria-live="off">
+      <div class="logo-slide">Michelin</div>
+      <div class="logo-slide">Grand Fiesta Americana</div>
+      <div class="logo-slide">Hospital Ángeles</div>
+    </div>
+    <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+  </div>
+
+  <!-- CONTACTO -->
+  <a class="cell card-contacto" href="/contacto.html">
+    <div class="eyebrow">Hablemos</div>
+    <div>
+      <h3 class="display">Contacto</h3>
+      <div class="arrow" aria-hidden="true">→</div>
+    </div>
+  </a>
+
+</div>
+
+<!-- BOTÓN MENÚ (icono Climatika, no hamburguesa) -->
+<button class="menu-btn" id="menuBtn" aria-haspopup="true" aria-expanded="false" aria-controls="navPanel" aria-label="Abrir menú">
+  <picture>
+    <source srcset="assets/img/brand/icon-climatika.webp" type="image/webp">
+    <img class="icono" src="assets/img/brand/icon-climatika.png" alt="" width="37" height="28">
+  </picture>
+  <span class="x-icon" aria-hidden="true"><span></span><span></span></span>
+</button>
+
+<!-- SCRIM COMPARTIDO -->
+<div class="scrim" id="scrim"></div>
+
+<!-- PANEL DE NAVEGACIÓN (cuadrante con esquinas redondeadas) -->
+<nav class="nav-panel" id="navPanel" aria-label="Menú principal" hidden>
+  <ul>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/nosotros.html">Nosotros</a></li>
+    <li><a href="/aquavita.html">Aquavita</a></li>
+    <li><a href="/tecnologia.html">Tecnología</a></li>
+    <li><a href="/clientes.html">Clientes</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+  </ul>
+  <div class="nav-foot">Soy Climatika · Hub digital de vinculación socioambiental</div>
+</nav>
+
+<!-- MODAL VIDEO DEMO (cuadrante centrado) -->
+<div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" hidden>
+  <button class="modal-close" id="videoModalClose" aria-label="Cerrar">×</button>
+  <div class="video-frame">
+    <div class="frame-inner">
+      <span class="play" aria-hidden="true">▶</span>
+      Video próximamente
+    </div>
+  </div>
+  <h3 id="videoModalTitle" class="display">Descubre Soy Climatika en 2 minutos</h3>
+  <p>Estamos terminando el video demo. Mientras tanto, escríbenos y te mostramos la plataforma en vivo.</p>
+  <a class="modal-cta" href="/contacto.html">Hablar con el equipo →</a>
+</div>
+
+<script src="assets/js/hero.js" defer></script>
+</body>
+</html>
