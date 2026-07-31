@@ -42,11 +42,15 @@
   </a>
 
   <!-- CTA: VIDEO DEMO -->
-  <button class="cell card-cta" id="videoCta" type="button" aria-haspopup="dialog" aria-controls="videoModal">
-    <div class="eyebrow">Video demo</div>
-    <div>
-      <h3 class="display">Conoce más</h3>
-      <div class="arrow" aria-hidden="true">→</div>
+  <button class="cell card-cta" id="videoCta" type="button" aria-haspopup="dialog" aria-controls="videoStage">
+    <video class="cta-video" id="ctaVideo" src="assets/video/video-demo-climatika.mp4" autoplay muted loop playsinline></video>
+    <div class="cta-scrim" aria-hidden="true"></div>
+    <div class="cta-overlay">
+      <div class="eyebrow">Video demo</div>
+      <div>
+        <h3 class="display">Conoce más</h3>
+        <div class="arrow" aria-hidden="true">→</div>
+      </div>
     </div>
   </button>
 
@@ -97,18 +101,9 @@
   <div class="nav-foot">Soy Climatika · Hub digital de vinculación socioambiental</div>
 </nav>
 
-<!-- MODAL VIDEO DEMO (cuadrante centrado) -->
-<div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle" hidden>
-  <button class="modal-close" id="videoModalClose" aria-label="Cerrar">×</button>
-  <div class="video-frame">
-    <div class="frame-inner">
-      <span class="play" aria-hidden="true">▶</span>
-      Video próximamente
-    </div>
-  </div>
-  <h3 id="videoModalTitle" class="display">Descubre Soy Climatika en 2 minutos</h3>
-  <p>Estamos terminando el video demo. Mientras tanto, escríbenos y te mostramos la plataforma en vivo.</p>
-  <a class="modal-cta" href="/contacto.html">Hablar con el equipo →</a>
+<!-- VIDEO A PANTALLA COMPLETA (transición desde el cuadrante Video demo, reutiliza el mismo <video>) -->
+<div class="video-stage" id="videoStage" role="dialog" aria-modal="true" aria-label="Video demo Soy Climatika" hidden>
+  <button class="stage-close" id="stageClose" aria-label="Cerrar video">×</button>
 </div>
 
 <script src="assets/js/hero.js" defer></script>
