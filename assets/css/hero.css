@@ -134,32 +134,7 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   background:var(--verde-climatika);
   color:var(--blanco);
   justify-content:flex-end;
-}
-.card-aquavita .water{
-  position:absolute;
-  inset:0;
-  overflow:hidden;
-  pointer-events:none;
-  z-index:0;
-}
-.card-aquavita .water-layer{
-  position:absolute;
-  bottom:-2px;
-  left:0;
-  width:200%;
-  height:100%;
-}
-.card-aquavita .water-back{
-  fill: rgba(255,255,255,.07);
-  animation: aquaWave 16s linear infinite;
-}
-.card-aquavita .water-front{
-  fill: rgba(255,255,255,.12);
-  animation: aquaWave 10s linear infinite reverse;
-}
-@keyframes aquaWave{
-  from{ transform: translateX(0); }
-  to{ transform: translateX(-50%); }
+  view-transition-name: aquavita-hero;
 }
 .aquavita-content{
   position:relative;
@@ -169,7 +144,7 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   font-size:11px;
   letter-spacing:.08em;
   text-transform:uppercase;
-  color:var(--verde-menta);
+  color:var(--menta-claro);
   margin-bottom:10px;
   font-weight:600;
 }
@@ -393,7 +368,6 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
 @media (prefers-reduced-motion: reduce){
   .logo-slide, .dots span{ animation:none !important; opacity:1 !important; }
   .logo-slide:not(:nth-child(1)){ display:none; }
-  .water-layer{ animation:none !important; }
   a.cell, button.cell, .video-stage{
     transition:none !important;
   }

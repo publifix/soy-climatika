@@ -1,0 +1,144 @@
+/* ---------- HERO (morph target: view-transition-name: aquavita-hero) ---------- */
+.aq-hero{
+  view-transition-name: aquavita-hero;
+  background:var(--verde-climatika);
+  color:var(--blanco);
+  overflow:hidden;
+}
+.aq-hero .back-link{ color:var(--blanco); background:rgba(255,255,255,.16); }
+.aq-hero .back-link:hover{ background:rgba(255,255,255,.28); }
+.aq-hero .hero-eyebrow{ color:var(--menta-claro); }
+.aq-hero-sub{ color:var(--menta-claro); }
+.aq-hero .hero-band-inner,
+.aq-hero .back-link{ position:relative; z-index:1; }
+
+.aq-hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top: clamp(24px, 2.8vw, 34px);
+}
+.aq-btn-primary{
+  display:inline-flex; align-items:center; gap:8px;
+  font-weight:700; font-size:14.5px;
+  background:var(--verde-accion); color:var(--carbon);
+  padding:13px 24px; border-radius:999px;
+  text-decoration:none;
+  transition: filter .2s ease, transform .2s ease;
+}
+.aq-btn-primary:hover{ filter:brightness(1.05); transform:translateY(-1px); }
+.aq-btn-primary:focus-visible{ outline:3px solid var(--blanco); outline-offset:2px; }
+.aq-btn-ghost{
+  display:inline-flex; align-items:center; gap:8px;
+  font-weight:600; font-size:14.5px;
+  background:transparent; color:var(--blanco);
+  border:1.5px solid rgba(255,255,255,.4);
+  padding:12px 22px; border-radius:999px;
+  text-decoration:none;
+  transition: background .2s ease, border-color .2s ease;
+}
+.aq-btn-ghost:hover{ background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.7); }
+.aq-btn-ghost:focus-visible{ outline:3px solid var(--verde-accion); outline-offset:2px; }
+
+.aq-stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap: clamp(12px, 1.6vw, 18px);
+  margin-top: clamp(30px, 3.6vw, 46px);
+  position:relative;
+  z-index:1;
+}
+.aq-stat{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--radius-sm);
+  padding: clamp(14px, 1.6vw, 20px) clamp(18px, 2vw, 26px);
+  min-width:150px;
+}
+.aq-stat .num{
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight:700;
+  line-height:1;
+  margin-bottom:6px;
+}
+.aq-stat .lbl{
+  font-size:12.5px;
+  color:var(--menta-claro);
+  line-height:1.35;
+  max-width:22ch;
+}
+
+/* ---------- QUÉ RESUELVE (2 columnas) ---------- */
+.aq-intro-grid{
+  display:grid;
+  grid-template-columns: minmax(220px, 340px) 1fr;
+  gap: clamp(28px, 4vw, 56px);
+}
+.aq-intro-grid h2{ margin:0; }
+.aq-intro-grid .section-copy + .section-copy{ margin-top: 1.2em; }
+
+/* ---------- TECNOLOGÍA (5 features) ---------- */
+.aq-tech-head{ max-width:640px; margin-bottom: clamp(32px, 4vw, 48px); }
+.aq-tech-head p{
+  font-size: clamp(14.5px, 1.2vw, 16.5px);
+  color:#4A6058;
+  margin: 10px 0 0 0;
+}
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap: clamp(14px, 1.6vw, 20px);
+}
+.feature-card{
+  background:var(--niebla);
+  border-radius:var(--radius-sm);
+  padding: clamp(20px, 2.2vw, 28px);
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  box-shadow: var(--cell-shadow);
+}
+.feature-card .icon{
+  width:42px; height:42px;
+  flex-shrink:0;
+  border-radius:50%;
+  background:var(--verde-climatika);
+  color:var(--blanco);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.feature-card h3{ font-size:16px; font-weight:700; margin:0 0 4px 0; color:var(--carbon); }
+.feature-card p{ font-size:13.5px; line-height:1.5; color:#4A6058; margin:0; }
+
+/* ---------- APLICACIONES (4 puntos) ---------- */
+.apps-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap: clamp(12px, 1.6vw, 18px);
+}
+.app-card{
+  background:var(--verde-menta);
+  border-radius:var(--radius-sm);
+  padding: clamp(22px, 2.4vw, 30px) clamp(10px, 1.4vw, 16px);
+  text-align:center;
+}
+.app-card .icon{
+  width:30px; height:30px;
+  margin:0 auto 12px;
+  color:var(--verde-bosque);
+}
+.app-card h3{ font-size:14.5px; font-weight:700; margin:0; color:var(--carbon); }
+
+@media (max-width: 900px){
+  .aq-intro-grid{ grid-template-columns:1fr; }
+  .feature-grid{ grid-template-columns:repeat(2, 1fr); }
+}
+@media (max-width: 620px){
+  .feature-grid{ grid-template-columns:1fr; }
+  .apps-grid{ grid-template-columns:repeat(2, 1fr); }
+  .aq-stats{ flex-direction:column; }
+  .aq-stat{ min-width:0; }
+  .aq-hero-actions{ flex-direction:column; align-items:stretch; }
+  .aq-hero-actions a{ text-align:center; justify-content:center; }
+}
