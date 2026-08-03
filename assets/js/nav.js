@@ -13,6 +13,7 @@
     scrim.classList.add('open');
     menuBtn.classList.add('open');
     menuBtn.setAttribute('aria-expanded', 'true');
+    menuBtn.setAttribute('aria-label', 'Cerrar menú');
     navOpen = true;
     const firstLink = navPanel.querySelector('a');
     if (firstLink) firstLink.focus();
@@ -25,6 +26,7 @@
     scrim.classList.remove('open');
     menuBtn.classList.remove('open');
     menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Abrir menú');
     setTimeout(() => { navPanel.hidden = true; }, 300);
     menuBtn.focus();
     navOpen = false;

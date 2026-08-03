@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Soy Climatika — Hub digital de vinculación socioambiental</title>
-<meta name="description" content="Soy Climatika conecta soluciones socioambientales con espacios públicos y privados que quieren ser agentes de cambio.">
+<meta name="description" content="Soy Climatika es un hub digital de vinculación socioambiental que conecta soluciones para espacios públicos y privados que quieren ser agentes de cambio.">
 <link rel="icon" type="image/webp" href="assets/img/brand/icon-climatika.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +14,13 @@
 </head>
 <body>
 
-<div class="hero">
+<main class="hero">
 
   <!-- MARCA -->
   <div class="cell panel-left">
     <div class="logo-wrap">
       <picture>
+        <source srcset="assets/img/brand/logo-dark.avif" type="image/avif">
         <source srcset="assets/img/brand/logo-dark.webp" type="image/webp">
         <img src="assets/img/brand/logo-dark.png" alt="Soy Climatika" width="180" height="45">
       </picture>
@@ -34,8 +35,9 @@
   <a class="cell card-nosotros" href="nosotros.html">
     <div class="founder">
       <picture class="avatar">
+        <source srcset="assets/img/team/fer-bermudez.avif" type="image/avif">
         <source srcset="assets/img/team/fer-bermudez.webp" type="image/webp">
-        <img src="assets/img/team/fer-bermudez.jpg" alt="Fernanda Bermúdez" width="52" height="52">
+        <img src="assets/img/team/fer-bermudez.jpg" alt="Fernanda Bermúdez, Founder de Soy Climatika" width="52" height="52">
       </picture>
       <div class="founder-info">
         <span class="founder-name">Fernanda Bermúdez</span>
@@ -69,7 +71,7 @@
     <div class="cta-overlay">
       <div class="eyebrow">Video demo</div>
       <div>
-        <h3 class="display">Conoce más</h3>
+        <h2 class="display">Conoce más</h2>
         <div class="arrow" aria-hidden="true">→</div>
       </div>
     </div>
@@ -77,8 +79,8 @@
 
   <!-- CARRUSEL CLIENTES -->
   <div class="cell card-carousel">
-    <div class="eyebrow">Quienes ya confían</div>
-    <div class="logo-carousel" aria-live="off">
+    <h2 class="eyebrow">Quienes ya confían</h2>
+    <div class="logo-carousel" aria-live="off" aria-label="Empresas que ya confían en Soy Climatika, en rotación automática">
       <div class="logo-slide">Michelin</div>
       <div class="logo-slide">Grand Fiesta Americana Querétaro</div>
       <div class="logo-slide">Hospital Ángeles Centro Sur</div>
@@ -92,16 +94,17 @@
   <a class="cell card-contacto" href="https://wa.me/524421457364?text=Hola%2C%20me%20gustaria%20saber%20mas%20sobre%20Soy%20Climatika." target="_blank" rel="noopener noreferrer">
     <div class="eyebrow">Hablemos</div>
     <div>
-      <h3 class="display">WhatsApp</h3>
+      <h2 class="display">WhatsApp</h2>
       <div class="arrow" aria-hidden="true">→</div>
     </div>
   </a>
 
-</div>
+</main>
 
 <!-- BOTÓN MENÚ (icono Climatika, no hamburguesa) -->
 <button class="menu-btn" id="menuBtn" aria-haspopup="true" aria-expanded="false" aria-controls="navPanel" aria-label="Abrir menú">
   <picture>
+    <source srcset="assets/img/brand/icon-climatika.avif" type="image/avif">
     <source srcset="assets/img/brand/icon-climatika.webp" type="image/webp">
     <img class="icono" src="assets/img/brand/icon-climatika.png" alt="" width="37" height="28">
   </picture>
@@ -109,7 +112,7 @@
 </button>
 
 <!-- SCRIM COMPARTIDO -->
-<div class="scrim" id="scrim"></div>
+<div class="scrim" id="scrim" aria-hidden="true"></div>
 
 <!-- PANEL DE NAVEGACIÓN (cuadrante con esquinas redondeadas) -->
 <nav class="nav-panel" id="navPanel" aria-label="Menú principal" hidden>

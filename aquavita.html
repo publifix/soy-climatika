@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aquavita — Soy Climatika</title>
-<meta name="description" content="Aquavita es la tecnología de ahorro de agua de Soy Climatika: hasta 30% de ahorro promedio sin perder presión ni experiencia de uso, ya instalada en hoteles, hospitales y espacios públicos.">
+<title>Aquavita — Tecnología de ahorro de agua | Soy Climatika</title>
+<meta name="description" content="Aquavita, tecnología de Soy Climatika, permite a hoteles, hospitales y empresas ahorrar hasta 30% de agua sin perder presión ni la experiencia de uso.">
 <link rel="icon" type="image/webp" href="assets/img/brand/icon-climatika.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,9 +57,9 @@
 <main id="contenido">
 
   <!-- QUÉ RESUELVE -->
-  <section class="page-section">
+  <section class="page-section" aria-labelledby="que-resuelve-heading">
     <div class="container reveal aq-intro-grid">
-      <h2 class="display section-heading">¿Qué resuelve Aquavita?</h2>
+      <h2 class="display section-heading" id="que-resuelve-heading">¿Qué resuelve Aquavita?</h2>
       <div>
         <p class="section-copy">El agua que se desperdicia en lavabos, regaderas y sanitarios de alto tráfico rara vez se nota día a día — pero se acumula rápido en hoteles, hospitales, oficinas y cualquier espacio con muchos usuarios. Aquavita nace para cerrar esa fuga silenciosa.</p>
         <p class="section-copy">Es un dispositivo que se instala directamente en la salida del agua y aprovecha una cavidad cónica con efecto Vénturi para optimizar el flujo: la misma sensación de presión para quien lo usa, con un ahorro real y medible para quien administra el espacio.</p>
@@ -69,11 +69,11 @@
   </section>
 
   <!-- TECNOLOGÍA -->
-  <section class="page-section section-tint" id="tecnologia">
+  <section class="page-section section-tint" id="tecnologia" aria-labelledby="tecnologia-heading">
     <div class="container reveal">
       <div class="aq-tech-head">
         <span class="eyebrow">Tecnología</span>
-        <h2 class="display section-heading">Tecnología Aquavita aplicada en nuestros dispositivos</h2>
+        <h2 class="display section-heading" id="tecnologia-heading">Tecnología Aquavita aplicada en nuestros dispositivos</h2>
         <p>Cinco elementos que hacen posible el ahorro sin sacrificar la experiencia de uso.</p>
       </div>
 
@@ -132,11 +132,11 @@
   </section>
 
   <!-- DÓNDE SE INSTALA -->
-  <section class="page-section">
+  <section class="page-section" aria-labelledby="aplicaciones-heading">
     <div class="container reveal">
       <div class="aq-tech-head">
         <span class="eyebrow">Aplicaciones</span>
-        <h2 class="display section-heading">Dónde se instala</h2>
+        <h2 class="display section-heading" id="aplicaciones-heading">Dónde se instala</h2>
         <p class="section-copy">Un mismo dispositivo, cuatro puntos de aplicación dentro de cualquier espacio.</p>
       </div>
       <div class="apps-grid">
@@ -161,10 +161,10 @@
   </section>
 
   <!-- CONFÍAN EN NOSOTROS -->
-  <section class="page-section section-tint">
+  <section class="page-section section-tint" aria-labelledby="confian-heading">
     <div class="container reveal">
       <span class="eyebrow">Confían en nosotros</span>
-      <h2 class="display section-heading">Espacios que ya ahorran agua con Aquavita</h2>
+      <h2 class="display section-heading" id="confian-heading">Espacios que ya ahorran agua con Aquavita</h2>
       <ul class="trust-list">
         <li>Michelin</li>
         <li>Grand Fiesta Americana Querétaro</li>
@@ -176,17 +176,22 @@
   </section>
 
   <!-- CIERRE -->
-  <section class="cta-band reveal" id="cta">
-    <h2 class="display">Conoce más solicitando el video</h2>
+  <section class="cta-band reveal" id="cta" aria-labelledby="aq-cta-heading">
+    <h2 class="display" id="aq-cta-heading">Conoce más solicitando el video</h2>
     <p>"Protocolo de prueba para hoteles" — te mostramos paso a paso cómo se instala Aquavita y cómo medir el ahorro real en tu propiedad.</p>
     <a class="cta-btn" href="https://wa.me/524421457364?text=Hola%2C%20me%20gustaria%20solicitar%20el%20video%20demo%20de%20Aquavita." target="_blank" rel="noopener noreferrer">Solicitar por WhatsApp →</a>
   </section>
 
 </main>
 
+<footer class="site-footer">
+  <p>Soy Climatika · Hub digital de vinculación socioambiental</p>
+</footer>
+
 <!-- BOTÓN MENÚ (icono Climatika, no hamburguesa) -->
 <button class="menu-btn" id="menuBtn" aria-haspopup="true" aria-expanded="false" aria-controls="navPanel" aria-label="Abrir menú">
   <picture>
+    <source srcset="assets/img/brand/icon-climatika.avif" type="image/avif">
     <source srcset="assets/img/brand/icon-climatika.webp" type="image/webp">
     <img class="icono" src="assets/img/brand/icon-climatika.png" alt="" width="37" height="28">
   </picture>
@@ -194,7 +199,7 @@
 </button>
 
 <!-- SCRIM COMPARTIDO -->
-<div class="scrim" id="scrim"></div>
+<div class="scrim" id="scrim" aria-hidden="true"></div>
 
 <!-- PANEL DE NAVEGACIÓN -->
 <nav class="nav-panel" id="navPanel" aria-label="Menú principal" hidden>

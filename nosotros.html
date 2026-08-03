@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nosotros — Soy Climatika</title>
-<meta name="description" content="Soy Climatika es un hub digital de vinculación socioambiental fundado por Fernanda Bermúdez, LinkedIn Top Voice en Sostenibilidad.">
+<title>Nosotros — Soy Climatika, fundada por Fernanda Bermúdez</title>
+<meta name="description" content="Hub digital de vinculación socioambiental fundado por Fernanda Bermúdez, LinkedIn Top Voice en Sostenibilidad, para construir un futuro que funcione mejor.">
 <link rel="icon" type="image/webp" href="assets/img/brand/icon-climatika.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +31,9 @@
 <main id="contenido">
 
   <!-- QUÉ ES SOY CLIMATIKA -->
-  <section class="page-section nos-intro">
+  <section class="page-section nos-intro" aria-labelledby="que-es-heading">
     <div class="container reveal">
-      <h2 class="display section-heading">¿Qué es Soy Climatika?</h2>
+      <h2 class="display section-heading" id="que-es-heading">¿Qué es Soy Climatika?</h2>
       <p class="section-copy">Soy Climatika es un hub digital de vinculación socioambiental: un espacio donde las mejores soluciones se encuentran para crear algo más grande. Trabajamos todos los días para construir un futuro que funcione mejor para las personas y para su entorno. Entre las tecnologías que forman parte de este ecosistema está Aquavita, nuestra solución de ahorro de agua (conoce más en la sección <a href="aquavita.html">Aquavita</a>).</p>
     </div>
   </section>
@@ -41,15 +41,16 @@
   <!-- IMAGEN DECORATIVA -->
   <figure class="nos-banner reveal">
     <picture>
+      <source srcset="assets/img/decor/vinculacion-comunidad.avif" type="image/avif">
       <source srcset="assets/img/decor/vinculacion-comunidad.webp" type="image/webp">
       <img src="assets/img/decor/vinculacion-comunidad.jpg" alt="Dos generaciones cuidando plantas juntas en un invernadero, símbolo de la vinculación socioambiental" width="1800" height="1013" loading="lazy">
     </picture>
   </figure>
 
   <!-- QUIENES YA CONFÍAN -->
-  <section class="page-section section-tint nos-trust">
+  <section class="page-section section-tint nos-trust" aria-labelledby="trust-heading">
     <div class="container reveal">
-      <span class="eyebrow">Quienes ya confían en nosotros</span>
+      <h2 class="eyebrow" id="trust-heading">Quienes ya confían en nosotros</h2>
       <ul class="trust-list">
         <li>Michelin</li>
         <li>Grand Fiesta Americana Querétaro</li>
@@ -62,15 +63,16 @@
   </section>
 
   <!-- FOUNDER -->
-  <section class="page-section nos-founder">
+  <section class="page-section nos-founder" aria-labelledby="founder-heading">
     <div class="container">
       <div class="nos-founder-grid">
         <picture class="nos-founder-photo reveal">
+          <source srcset="assets/img/team/fer-bermudez-founder.avif" type="image/avif">
           <source srcset="assets/img/team/fer-bermudez-founder.webp" type="image/webp">
           <img src="assets/img/team/fer-bermudez-founder.jpg" alt="Fernanda Bermúdez, founder de Soy Climatika" width="560" height="686" loading="lazy">
         </picture>
         <div class="nos-founder-content reveal">
-          <span class="eyebrow">Fernanda Bermúdez — Founder</span>
+          <h2 class="eyebrow" id="founder-heading">Fernanda Bermúdez — Founder</h2>
           <p class="nos-founder-lead">Soy Climatika nació de una convicción de su fundadora, Fernanda Bermúdez:</p>
           <blockquote class="nos-quote">
             <p>“Fundé Soy Climatika con una idea clara: que la acción climática deje de ser discurso y se convierta en realidad.”</p>
@@ -88,16 +90,21 @@
   </section>
 
   <!-- CIERRE -->
-  <section class="cta-band reveal">
-    <h2 class="display">¿Listos para construir juntos un futuro mejor?</h2>
+  <section class="cta-band reveal" aria-labelledby="nos-cta-heading">
+    <h2 class="display" id="nos-cta-heading">¿Listos para construir juntos un futuro mejor?</h2>
     <a class="cta-btn" href="https://wa.me/524421457364?text=Hola%2C%20me%20gustaria%20saber%20mas%20sobre%20Soy%20Climatika." target="_blank" rel="noopener noreferrer">Hablemos por WhatsApp →</a>
   </section>
 
 </main>
 
+<footer class="site-footer">
+  <p>Soy Climatika · Hub digital de vinculación socioambiental</p>
+</footer>
+
 <!-- BOTÓN MENÚ (icono Climatika, no hamburguesa) -->
 <button class="menu-btn" id="menuBtn" aria-haspopup="true" aria-expanded="false" aria-controls="navPanel" aria-label="Abrir menú">
   <picture>
+    <source srcset="assets/img/brand/icon-climatika.avif" type="image/avif">
     <source srcset="assets/img/brand/icon-climatika.webp" type="image/webp">
     <img class="icono" src="assets/img/brand/icon-climatika.png" alt="" width="37" height="28">
   </picture>
@@ -105,7 +112,7 @@
 </button>
 
 <!-- SCRIM COMPARTIDO -->
-<div class="scrim" id="scrim"></div>
+<div class="scrim" id="scrim" aria-hidden="true"></div>
 
 <!-- PANEL DE NAVEGACIÓN -->
 <nav class="nav-panel" id="navPanel" aria-label="Menú principal" hidden>
