@@ -56,7 +56,7 @@
 
   <!-- PROYECTOS: AQUAVITA / WESS / CLIMATE WEEK (carrusel) -->
   <div class="cell card-aquavita">
-    <a class="project-slide slide-aquavita" href="aquavita.html" aria-label="Aquavita: tecnología que permite a empresas lograr un ahorro significativo de agua">
+    <a class="project-slide slide-aquavita is-active" href="aquavita.html" aria-label="Aquavita: tecnología que permite a empresas lograr un ahorro significativo de agua">
       <div class="water" aria-hidden="true">
         <svg class="water-layer water-back" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M0,55 C150,25 450,85 600,55 C750,25 1050,85 1200,55 L1200,120 L0,120 Z"></path>
@@ -85,7 +85,11 @@
         <p>Coorganizamos con SECTUR Querétaro un Side Event de la Climate Week NYC.</p>
       </div>
     </a>
-    <div class="project-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="project-dots" aria-label="Elegir proyecto destacado">
+      <button type="button" class="dot" data-target="slide-aquavita" aria-label="Ver Aquavita" aria-current="true"></button>
+      <button type="button" class="dot" data-target="slide-wess" aria-label="Ver WESS" aria-current="false"></button>
+      <button type="button" class="dot" data-target="slide-climateweek" aria-label="Ver Climate Week" aria-current="false"></button>
+    </div>
   </div>
 
   <!-- CTA: VIDEO DEMO -->
@@ -166,6 +170,7 @@
 </div>
 
 <script src="assets/js/nav.js" defer></script>
+<script src="assets/js/projects-carousel.js" defer></script>
 <script src="assets/js/hero.js" defer></script>
 </body>
 </html>
