@@ -128,15 +128,55 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   color:#3F5850;
 }
 
-/* ---------- AQUAVITA ---------- */
+/* ---------- PROYECTOS: AQUAVITA / WESS / CLIMATE WEEK (carrusel) ---------- */
 .card-aquavita{
   grid-area:aquavita;
-  background:var(--verde-climatika);
   color:var(--blanco);
-  justify-content:flex-end;
-  view-transition-name: aquavita-hero;
+  padding:0;
 }
-.aquavita-content{
+.project-slide{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding: clamp(18px, 2.2vw, 32px);
+  text-decoration:none;
+  color:inherit;
+  opacity:0;
+  pointer-events:none;
+  animation: projectFade 18s infinite;
+  transition: filter .25s ease;
+}
+.project-slide:hover{ filter:brightness(1.04); }
+.project-slide:focus-visible{
+  outline:3px solid var(--verde-accion);
+  outline-offset:-3px;
+  opacity:1;
+  pointer-events:auto;
+  z-index:2;
+}
+.project-slide.slide-aquavita{
+  background:var(--verde-climatika);
+  view-transition-name: aquavita-hero;
+  animation-delay:0s;
+}
+.project-slide.slide-wess{
+  background:#1F7A6B;
+  animation-delay:6s;
+}
+.project-slide.slide-climateweek{
+  background:#155C4E;
+  animation-delay:12s;
+}
+@keyframes projectFade{
+  0%{ opacity:0; }
+  3%{ opacity:1; }
+  30%{ opacity:1; }
+  33%{ opacity:0; }
+  100%{ opacity:0; }
+}
+.project-content{
   position:relative;
   z-index:1;
 }
@@ -161,6 +201,31 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   max-width:50ch;
   margin:0;
   padding-right: clamp(60px, 6vw, 90px);
+}
+.project-dots{
+  position:absolute;
+  right: clamp(18px, 2.2vw, 32px);
+  bottom: clamp(18px, 2.2vw, 32px);
+  z-index:3;
+  display:flex;
+  gap:6px;
+  pointer-events:none;
+}
+.project-dots span{
+  width:5px; height:5px;
+  border-radius:50%;
+  background:rgba(255,255,255,.35);
+  animation: projectDotPulse 18s infinite;
+}
+.project-dots span:nth-child(1){ animation-delay:0s; }
+.project-dots span:nth-child(2){ animation-delay:6s; }
+.project-dots span:nth-child(3){ animation-delay:12s; }
+@keyframes projectDotPulse{
+  0%{ background:rgba(255,255,255,.35); }
+  3%{ background:var(--verde-menta); }
+  30%{ background:var(--verde-menta); }
+  33%{ background:rgba(255,255,255,.35); }
+  100%{ background:rgba(255,255,255,.35); }
 }
 
 /* ---------- CTA: VIDEO DEMO ---------- */
@@ -369,6 +434,9 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
 @media (prefers-reduced-motion: reduce){
   .logo-slide, .dots span{ animation:none !important; opacity:1 !important; }
   .logo-slide:not(:nth-child(1)){ display:none; }
+  .project-slide, .project-dots span{ animation:none !important; }
+  .project-slide:not(.slide-aquavita){ display:none; }
+  .project-slide.slide-aquavita{ opacity:1 !important; pointer-events:auto !important; }
   a.cell, button.cell, .video-stage{
     transition:none !important;
   }
@@ -394,10 +462,12 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   .cell{ min-height:220px; }
 
   .credit-badge{
+    display:flex;
     position:static;
     transform:none;
     width:fit-content;
     margin: 20px auto clamp(20px, 6vw, 32px);
     box-shadow:none;
   }
+  .credit-panel{ display:none; }
 }

@@ -1,0 +1,12 @@
+/* ---------- HERO (tono diferenciado dentro de la familia verde de marca) ---------- */
+.cw-hero{
+  background:#155C4E;
+  color:var(--blanco);
+}
+.cw-hero .back-link{ color:var(--blanco); background:rgba(255,255,255,.16); }
+.cw-hero .back-link:hover{ background:rgba(255,255,255,.28); }
+.cw-hero .hero-eyebrow{ color:var(--menta-claro); }
+.cw-hero-sub{ color:var(--menta-claro); }
+
+/* ---------- UN SIDE EVENT CON IMPACTO ---------- */
+.page-media-grid .section-copy + .section-copy{ margin-top:1em; }

@@ -1,0 +1,13 @@
+/* ---------- HERO (tono diferenciado dentro de la familia verde de marca) ---------- */
+.wess-hero{
+  background:#1F7A6B;
+  color:var(--blanco);
+}
+.wess-hero .back-link{ color:var(--blanco); background:rgba(255,255,255,.16); }
+.wess-hero .back-link:hover{ background:rgba(255,255,255,.28); }
+.wess-hero .hero-eyebrow{ color:var(--menta-claro); }
+.wess-hero-sub{ color:var(--menta-claro); }
+
+/* ---------- EL ROL DE FERNANDA ---------- */
+.page-media-grid .section-copy + .section-copy{ margin-top:1em; }
+.page-media-grid .section-copy a{ white-space:nowrap; }
