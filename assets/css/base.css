@@ -247,6 +247,72 @@ a{ color:inherit; }
   letter-spacing:.02em;
   color:#5B6E69;
 }
+.site-footer .credit-line{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  margin:10px 0 0 0;
+  font-size:11.5px;
+}
+.credit-line a{
+  display:inline-flex;
+  align-items:center;
+  line-height:0;
+  border-radius:3px;
+}
+.credit-line img{
+  height:15px;
+  width:auto;
+  display:block;
+  opacity:.82;
+  transition:opacity .2s ease;
+}
+.credit-line a:hover img{ opacity:1; }
+.credit-line a:focus-visible{
+  outline:2px solid var(--verde-climatika);
+  outline-offset:3px;
+}
+
+/* Badge fijo para index.html (hero de viewport fijo, sin scroll en escritorio) */
+.credit-badge{
+  position:fixed;
+  left:50%;
+  bottom: clamp(10px, 1.4vw, 16px);
+  transform:translateX(-50%);
+  z-index:39;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin:0;
+  padding:6px 14px 6px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  font-size:11px;
+  letter-spacing:.01em;
+  color:#5B6E69;
+  box-shadow:0 4px 14px rgba(15,26,24,.1);
+}
+.credit-badge a{
+  display:inline-flex;
+  align-items:center;
+  line-height:0;
+  border-radius:3px;
+}
+.credit-badge img{
+  height:13px;
+  width:auto;
+  display:block;
+  opacity:.85;
+  transition:opacity .2s ease;
+}
+.credit-badge a:hover img{ opacity:1; }
+.credit-badge a:focus-visible{
+  outline:2px solid var(--verde-climatika);
+  outline-offset:2px;
+}
 
 /* ---------- MENU BUTTON (icono Climatika, no hamburguesa) ---------- */
 .menu-btn{

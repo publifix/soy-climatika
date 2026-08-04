@@ -392,4 +392,12 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   }
   .card-aquavita h2{ font-size:38px; }
   .cell{ min-height:220px; }
+
+  .credit-badge{
+    position:static;
+    transform:none;
+    width:fit-content;
+    margin: 20px auto clamp(20px, 6vw, 32px);
+    box-shadow:none;
+  }
 }
