@@ -172,11 +172,11 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
   animation-delay:12s;
 }
 @keyframes projectFade{
-  0%{ opacity:0; }
-  3%{ opacity:1; }
-  30%{ opacity:1; }
-  33%{ opacity:0; }
-  100%{ opacity:0; }
+  0%{ opacity:0; pointer-events:none; }
+  3%{ opacity:1; pointer-events:auto; }
+  30%{ opacity:1; pointer-events:auto; }
+  33%{ opacity:0; pointer-events:none; }
+  100%{ opacity:0; pointer-events:none; }
 }
 .project-content{
   position:relative;
