@@ -1,5 +1,6 @@
 /* ---------- HERO (tono diferenciado dentro de la familia verde de marca) ---------- */
 .wess-hero{
+  view-transition-name: wess-hero;
   background:#1F7A6B;
   color:var(--blanco);
 }

@@ -1,5 +1,6 @@
 /* ---------- HERO (tono diferenciado dentro de la familia verde de marca) ---------- */
 .cw-hero{
+  view-transition-name: climateweek-hero;
   background:#155C4E;
   color:var(--blanco);
 }
