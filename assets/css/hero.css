@@ -463,7 +463,7 @@ a.cell:active, button.cell:active{ transform:scale(.99); }
       "carousel  carousel"
       "contacto  contacto";
   }
-  .card-aquavita h2{ font-size:38px; }
+  .card-aquavita h2{ font-size: clamp(24px, 7.5vw, 34px); overflow-wrap: break-word; }
   .cell{ min-height:220px; }
 
   .credit-badge{
